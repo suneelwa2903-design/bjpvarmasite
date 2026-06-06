@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(netstat -ano)",
+      "Bash(taskkill /PID 22772 /F)",
+      "Bash(cmd /c \"taskkill /PID 22772 /F\")",
+      "Bash(powershell -Command \"Stop-Process -Id 22772 -Force\")",
+      "Bash(node -e \":*)",
+      "Bash(git -C /C/Users/marri/VarmaSite status src/lib/database.json)",
+      "Bash(git -C /C/Users/marri/VarmaSite show HEAD:src/lib/database.json)",
+      "Bash(grep -r \"impact\\\\|IMPACT\" /C/Users/marri/VarmaSite/src/components --include=*.tsx -l)",
+      "WebFetch(domain:mygunturmp.in)",
+      "WebFetch(domain:www.gkishanreddy.com)",
+      "WebFetch(domain:www.raoinderjitsingh.com)",
+      "WebFetch(domain:jds.ind.in)",
+      "WebFetch(domain:www.rajnathsingh.in)",
+      "WebFetch(domain:amitshah.co.in)",
+      "WebFetch(domain:nitingadkari.org.in)",
+      "WebFetch(domain:www.piyushgoyal.in)",
+      "WebFetch(domain:www.hardeepsinghpuri.com)",
+      "WebFetch(domain:jagatprakashnadda.in)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/initiatives)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/press-release)",
+      "WebSearch",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/profile)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/api/newsletter/subscribe)"
+    ]
+  }
+}

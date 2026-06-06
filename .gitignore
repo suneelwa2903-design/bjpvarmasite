@@ -1,0 +1,49 @@
+node_modules
+# Keep environment variables out of version control
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Secrets — service-account JSON keys, TLS material, anything sensitive.
+# The deployment guide stores the GCS service-account JSON at
+# /var/www/varmasite/secrets/gcp-storage-sa.json on the VM. Mirror that
+# layout locally and never commit anything under this directory.
+secrets/
+*.key
+*.pem
+
+/generated/prisma
+
+# Next.js build output
+.next
+out
+build
+dist
+
+# Database files
+*.db
+*.db-journal
+
+# Local-dev upload fallback. In production these go to GCS; locally they
+# write to public/uploads/mib/ for citizen attachments. Those files are
+# real citizen evidence in any environment — never track them.
+public/uploads/mib/
+
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

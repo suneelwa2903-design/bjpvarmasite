@@ -1,0 +1,211 @@
+// SQLite schema for local development
+// This schema uses SQLite instead of PostgreSQL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model SlideshowSlide {
+  id        String   @id @default(cuid())
+  title     String
+  image     String
+  caption   String
+  order     Int      @default(0)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([order])
+}
+
+model Initiative {
+  id          String   @id @default(cuid())
+  title       String
+  type        String   // 'constituency' or 'ministry'
+  date        String
+  description String
+  achievements String  // JSON array
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  newsArticles NewsArticle[]
+
+  @@index([type])
+  @@index([date])
+}
+
+model NewsArticle {
+  id           String   @id @default(cuid())
+  initiativeId String
+  title        String
+  source       String
+  date         String
+  snippet      String
+  image        String?
+  order        Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  initiative   Initiative @relation(fields: [initiativeId], references: [id], onDelete: Cascade)
+
+  @@index([initiativeId])
+  @@index([order])
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  username     String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+/// Make It Better portal models
+model MibUser {
+  id        String   @id @default(cuid())
+  name      String
+  email     String?  @unique
+  mobile    String?  @unique
+  role      String   // 'CITIZEN' | 'OFFICE_ADMIN' | 'OFFICE_AGENT' | 'OFFICE_VIEWER'
+  language  String?  // 'en' | 'te'
+  active    Boolean  @default(true)
+  passwordHash     String?
+  twoFactorSecret  String?
+  twoFactorEnabled Boolean   @default(false)
+  emailVerifiedAt  DateTime?
+  marketingOptIn   Boolean   @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  tickets        MibTicket[] @relation("UserTickets")
+  assignedTickets MibTicket[] @relation("AssignedTickets")
+  comments       MibTicketComment[]
+  events         MibTicketEvent[]
+  otps           MibOtp[]
+}
+
+model MibTicket {
+  id                String   @id @default(cuid())
+  ticketNo          String   @unique
+  source            String   @default("PUBLIC")
+  applicantName     String
+  mobile            String
+  email             String?
+  language          String?
+
+  category          String
+  categoryType      String
+
+  state             String
+  district          String
+  mandal            String?
+  ward              String?
+  pincode           String?
+
+  subject           String
+  descriptionHtml   String
+  descriptionPlain  String?
+
+  hasReference      Boolean  @default(false)
+  refName           String?
+  refPhone          String?
+  refLocation       String?
+
+  status            String   @default("NEW")
+  priority          String   @default("P2")
+  slaDueAt          DateTime?
+  eta               DateTime?
+  closedAt          DateTime?
+
+  createdById       String
+  createdBy         MibUser  @relation("UserTickets", fields: [createdById], references: [id])
+  
+  assignedToId      String?
+  assignedTo        MibUser? @relation("AssignedTickets", fields: [assignedToId], references: [id])
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  attachments       MibTicketAttachment[]
+  events            MibTicketEvent[]
+  comments          MibTicketComment[]
+
+  @@index([status])
+  @@index([source])
+  @@index([category, categoryType])
+  @@index([district])
+  @@index([assignedToId])
+}
+
+model MibOtp {
+  id         String   @id @default(cuid())
+  userId     String
+  code       String
+  purpose    String   // 'OFFICE_LOGIN'
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+
+  user       MibUser  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([purpose])
+  @@index([expiresAt])
+}
+
+model MibSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String   // JSON string
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+}
+
+model MibTicketAttachment {
+  id         String   @id @default(cuid())
+  ticketId   String
+  fileName   String
+  mimeType   String
+  sizeBytes  Int
+  storageUrl String
+  uploadedAt DateTime @default(now())
+
+  ticket     MibTicket @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+
+  @@index([ticketId])
+}
+
+model MibTicketEvent {
+  id           String   @id @default(cuid())
+  ticketId     String
+  actorUserId  String?
+  eventType    String   // CREATED | STATUS_CHANGED | NEED_INFO | REOPEN | ASSIGN | ASSIGNED | COMMENT
+  fromValue    String?
+  toValue      String?
+  note         String?
+  createdAt    DateTime @default(now())
+
+  ticket       MibTicket @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  actor        MibUser?  @relation(fields: [actorUserId], references: [id])
+
+  @@index([ticketId])
+}
+
+model MibTicketComment {
+  id           String   @id @default(cuid())
+  ticketId     String
+  authorUserId String?
+  isInternal   Boolean  @default(false)
+  bodyHtml     String
+  createdAt    DateTime @default(now())
+
+  ticket       MibTicket @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  author       MibUser?  @relation(fields: [authorUserId], references: [id])
+
+  @@index([ticketId])
+}
+

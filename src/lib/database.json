@@ -1,0 +1,501 @@
+{
+  "slideshow": [
+    {
+      "id": "slide-1",
+      "title": "",
+      "image": "/images/slide1.jpg",
+      "caption": "",
+      "order": 1,
+      "isActive": true,
+      "updatedAt": "2026-04-05T13:36:08.243Z"
+    },
+    {
+      "id": "slide-1762050244330",
+      "title": "",
+      "caption": "",
+      "order": 2,
+      "isActive": true,
+      "image": "/images/admin/slideshow/slideshow-1762050243674.jpg",
+      "createdAt": "2025-11-02T02:24:04.332Z",
+      "updatedAt": "2026-04-05T13:36:15.789Z"
+    }
+  ],
+  "initiatives": [
+    {
+      "id": "init-1",
+      "title": "Heavy Industries & Steel Development Initiatives",
+      "type": "ministry",
+      "date": "2025-06-18",
+      "description": "Multiple infrastructure projects in steel sector worth ₹2,787 crores sanctioned, transforming regional industrial capabilities.",
+      "achievements": [
+        "₹2,787 crore funding approved",
+        "3 major projects cleared",
+        "Infrastructure upgraded"
+      ],
+      "isActive": true,
+      "newsArticles": [
+        {
+          "id": "news-1",
+          "title": "₹2,787 crore for Amaravati projects",
+          "source": "The Hindu Bureau AMARAVATI",
+          "date": "18 June 2025",
+          "snippet": "Major push for central schemes in Amaravati - Two significant projects cleared with ₹2,787 crore funding",
+          "image": "/images/slide1.jpg",
+          "order": 1
+        },
+        {
+          "id": "news-2",
+          "title": "Industrial Growth Initiative Takes Shape",
+          "source": "Times of India",
+          "date": "19 Jun 2025",
+          "snippet": "In a major push for industrial development, the government has sanctioned multiple projects across the steel and heavy industries sector.",
+          "image": "/images/slide2.jpg",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "init-2",
+      "title": "AP BJP State Development Programs",
+      "type": "constituency",
+      "date": "2025-06-21",
+      "description": "Comprehensive development initiatives across Andhra Pradesh with focus on rural upliftment and industrial growth.",
+      "achievements": [
+        "48 crore sanctioned",
+        "Inner Ring Road-3 approved",
+        "Election promise fulfille"
+      ],
+      "isActive": true,
+      "newsArticles": [
+        {
+          "id": "news-3",
+          "title": "Another Step Towards Development - ₹48 Crores Sanctioned",
+          "source": "Eenadu",
+          "date": "21 Jun 2025",
+          "snippet": "CRDA has sanctioned ₹48 crores for Inner Ring Road-3, fulfilling yet another election promise.",
+          "image": "/images/slide2.jpg",
+          "order": 1
+        },
+        {
+          "id": "news-4",
+          "title": "Development Promise Fulfilled",
+          "source": "Deccan Chronicle",
+          "date": "22 Jun 2025",
+          "snippet": "The sanctioning of funds for Inner Ring Road-3 marks another fulfilled election promise.",
+          "image": "/images/slide3.jpg",
+          "order": 2
+        }
+      ],
+      "images": [
+        "/images/admin/initiatives/initiatives-1775398088155.webp"
+      ],
+      "updatedAt": "2026-04-05T14:08:09.344Z"
+    },
+    {
+      "id": "init-3",
+      "title": "Constituency Infrastructure Enhancement",
+      "type": "constituency",
+      "date": "2025-06-13",
+      "description": "Thanks to persistent efforts, Guntur secures two new ROBs worth ₹83.25 Cr and ₹76.34 Cr.",
+      "achievements": [
+        "83.25 crores for Shyamala Nagar ROB",
+        "76.34 crores for Sanjeevayya Nagar ROB",
+        "Enhanced connectivity"
+      ],
+      "isActive": true,
+      "newsArticles": [
+        {
+          "id": "news-5",
+          "title": "Thanks to Pemmāsani Efforts, Guntur Secures Two New ROBs",
+          "source": "The Hindu",
+          "date": "13 June 2025",
+          "snippet": "Thanks to Pemmāsani Efforts, Guntur Secures Two New ROBs - ₹83.25 Cr for Shyamala Nagar, ₹76.34 Cr for Sanjeevayya Nagar",
+          "image": "/images/slide4.jpg",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "init-4",
+      "title": "Drinking Water Infrastructure",
+      "type": "constituency",
+      "date": "2025-05-18",
+      "description": "Rs. 362.23 Crore sanctioned for drinking water projects under AMRUT 2.0.",
+      "achievements": [
+        "₹362.23 Crores sanctioned",
+        "AMRUT 2.0 program",
+        "Clean water supply"
+      ],
+      "isActive": true,
+      "newsArticles": [
+        {
+          "id": "news-6",
+          "title": "Rs. 362.23 Crore Sanctioned for Guntur Gorantla Drinking Water Projects Under AMRUT 2.0",
+          "source": "Times of India",
+          "date": "18 May 2025",
+          "snippet": "The Central Government has sanctioned Rs. 362.23 crores for drinking water projects in Guntur and Gorantla under the AMRUT 2.0 scheme.",
+          "image": "/images/slide5.jpg",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "init-5",
+      "title": "100-Bed ESI Hospital",
+      "type": "constituency",
+      "date": "2025-04-17",
+      "description": "New healthcare facility with ₹100 Crore funding for comprehensive medical services.",
+      "achievements": [
+        "₹100 Crores funding",
+        "100-bed facility",
+        "Enhanced healthcare"
+      ],
+      "isActive": true,
+      "newsArticles": [
+        {
+          "id": "news-7",
+          "title": "100-Bed ESI Hospital in Guntur with ₹100 Crore Funding",
+          "source": "The Hindu",
+          "date": "17 April 2025",
+          "snippet": "100-Bed ESI Hospital in Guntur with ₹100 Crore Funding: A Result of Dr. Pemmasani Persistent Efforts",
+          "image": "/images/slide1.jpg",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "init-6",
+      "title": "Industrial Growth Programs",
+      "type": "ministry",
+      "date": "2025-06-02",
+      "description": "Promoting heavy industries with focus on modern manufacturing and job creation.",
+      "achievements": [
+        "Job creation programs",
+        "Modern manufacturing units",
+        "Industrial growth"
+      ],
+      "isActive": true,
+      "newsArticles": []
+    },
+    {
+      "id": "init-1761724777277",
+      "title": "Test",
+      "description": "Test",
+      "type": "constituency",
+      "date": "2025-10-15",
+      "isActive": true,
+      "achievements": [
+        "Visited Cyclone Impacted Areas to ensure distress supplies are well managed to deliver to impacted population"
+      ],
+      "createdAt": "2025-10-29T07:59:37.277Z"
+    },
+    {
+      "id": "init-1761725758208",
+      "title": "Check",
+      "description": "Check Check",
+      "type": "ministry",
+      "date": "2025-10-09",
+      "isActive": true,
+      "achievements": [
+        "Yes",
+        "No",
+        "Not all"
+      ],
+      "images": [
+        "/images/admin/initiatives/initiatives-1761725758104.jpg",
+        "/images/admin/initiatives/initiatives-1761725758139.jpg"
+      ],
+      "createdAt": "2025-10-29T08:15:58.208Z"
+    }
+  ],
+  "press": [
+    {
+      "id": "press-1761727001000",
+      "slug": "bjpvarma-addresses-industrial-growth-forum",
+      "title": "BJPVarma addresses Industrial Growth",
+      "date": "2025-10-20",
+      "category": "Release",
+      "summary": "BJPVarma outlined a roadmap to accelerate manufacturing and job creation across key sectors.",
+      "source": "BJPVarma Media",
+      "link": "https://example.com/press/industrial-growth",
+      "thumbnail": "/press/press-1775398201230.webp",
+      "createdAt": "2025-10-29T08:45:01.000Z",
+      "isFeatured": false,
+      "updatedAt": "2026-04-05T14:10:01.417Z"
+    },
+    {
+      "id": "press-1761727002000",
+      "slug": "infrastructure-initiatives-to-boost-connectivity",
+      "title": "Infrastructure initiatives to boost connectivity",
+      "date": "2025-09-12",
+      "category": "Article",
+      "summary": "Major infrastructure initiatives will improve connectivity and drive regional development.",
+      "source": "National Daily",
+      "link": "https://example.com/articles/connectivity-initiatives",
+      "thumbnail": "/images/slide4.jpg",
+      "createdAt": "2025-10-29T08:45:02.000Z"
+    },
+    {
+      "id": "press-1761727003000",
+      "slug": "statement-on-public-service-commitment",
+      "title": "Statement on Public Service Commitment",
+      "date": "2025-08-05",
+      "category": "Statement",
+      "summary": "BJPVarma reaffirmed commitment to transparent governance and citizen-first policies.",
+      "source": "BJPVarma Office",
+      "link": "https://example.com/statement/public-service-commitment",
+      "thumbnail": "/images/slide3.jpg",
+      "createdAt": "2025-10-29T08:45:03.000Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "event-1761733166014",
+      "slug": "montha-cyclone",
+      "title": "Montha Cyclone",
+      "date": "2025-10-29",
+      "status": "Upcoming",
+      "category": "Public Meeting",
+      "location": "Bhimavaram",
+      "summary": "Control Room Operations Monitoring",
+      "link": "",
+      "thumbnail": "/images/admin/events/events-1761733162154.jpg",
+      "createdAt": "2025-10-29T10:19:26.015Z"
+    },
+    {
+      "id": "event-1761818459204",
+      "slug": "diwali-milan-cultural-program",
+      "title": "Diwali Milan-cultural program",
+      "date": "2025-10-26",
+      "status": "Past",
+      "category": "Public Meeting",
+      "location": "New Delhi",
+      "summary": "'Da in Delhi. Participated in a special Diwali Milan-cultural program organized by Shyama Prasad Mukherjee Research Foundation (SPMRF).\n\nAmazing performances reflecting Indian culture, unity and service at the ceremony captivated everyone.\n\nThe efforts SPMRF organization are doing in social consciousness, national development, cultural heritage protection are commendable.",
+      "link": "",
+      "thumbnail": "/images/admin/events/events-1761818455446.jpg",
+      "createdAt": "2025-10-30T10:00:59.204Z"
+    },
+    {
+      "id": "event-1762072893355",
+      "slug": "india-sweden-steel-modernisation",
+      "title": "India Sweden Steel Modernisation",
+      "date": "2025-10-31",
+      "status": "Past",
+      "category": "Government Event",
+      "location": "New Delhi",
+      "summary": "India Sweden Steel Modernisation",
+      "link": "",
+      "thumbnail": "/images/admin/events/events-1762072892785.jpg",
+      "createdAt": "2025-11-02T08:41:33.356Z"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gallery-1761733488038",
+      "title": "Swearing Ceremony",
+      "date": "2024-06-24",
+      "description": "Oath Taking in New Delhi as ",
+      "image": "/images/admin/gallery/gallery-1761733487875.JPG",
+      "createdAt": "2025-10-29T10:24:48.039Z",
+      "updatedAt": "2026-04-05T14:10:41.732Z"
+    }
+  ],
+  "users": [],
+  "journey": [
+    {
+      "id": "journey-1762057500893",
+      "image": "/images/admin/journey/journey-1762057500204.JPG",
+      "description": "Oath Taking Ceremony in New Delhi along with PM",
+      "order": 5,
+      "isActive": true,
+      "createdAt": "2025-11-02T04:25:00.894Z",
+      "updatedAt": "2025-11-02T08:53:13.396Z"
+    },
+    {
+      "id": "journey-1762058006921",
+      "image": "/images/admin/journey/journey-1762058006850.jpg",
+      "description": "Kicking off massive constituency rally with then PM Atal Ji",
+      "order": 1,
+      "isActive": true,
+      "createdAt": "2025-11-02T04:33:26.922Z",
+      "updatedAt": "2025-11-02T08:53:13.035Z"
+    },
+    {
+      "id": "journey-1762058067182",
+      "image": "/images/admin/journey/journey-1762058067078.jpg",
+      "description": "President of BJP State Wide Youth Party AP",
+      "order": 3,
+      "isActive": true,
+      "createdAt": "2025-11-02T04:34:27.182Z",
+      "updatedAt": "2025-11-02T08:53:13.224Z"
+    },
+    {
+      "id": "journey-1762058130265",
+      "image": "/images/admin/journey/journey-1762058130214.jpg",
+      "description": "Fighting for Aqua Farmers rights with Congress Government",
+      "order": 2,
+      "isActive": true,
+      "createdAt": "2025-11-02T04:35:30.265Z",
+      "updatedAt": "2025-11-02T08:53:13.129Z"
+    },
+    {
+      "id": "journey-1762058165068",
+      "image": "/images/admin/journey/journey-1762058165022.jpg",
+      "description": "Opening New Party Office in Bhimavaram",
+      "order": 4,
+      "isActive": true,
+      "createdAt": "2025-11-02T04:36:05.068Z",
+      "updatedAt": "2025-11-02T08:53:13.305Z"
+    }
+  ],
+  "biography": {
+    "content": "Bhupathiraju Srinivasa Varma, widely known as BJP Varma, was born in 1968 in Bhimavaram, West Godavari district, Andhra Pradesh. A lifelong RSS swayamsevak and BJP karyakarta, he began his political journey as a student leader in 1980.\n\nHolding a Master of Arts in Political Science from Andhra University, a Master of Library & Information Science from Annamalai University, and a Bachelor of Law, Shri Varma joined the BJP in 1988 as a dedicated grassroots worker. He rose through every level of the party organisation over four decades of service — from District President of Bhimavaram Town Unit (1991–97) to West Godavari District President (two terms, 2008–14) to State Secretary, BJP Andhra Pradesh (2020–23).\n\nIn the 2024 Lok Sabha elections, he won the Narsapuram constituency with a decisive margin of 2,76,802 votes. He was subsequently appointed Union Minister of State for Heavy Industries & Steel in the Modi 3.0 Cabinet.",
+    "image": "/images/slide1.jpg",
+    "updatedAt": "2026-03-30T03:00:43.432Z"
+  },
+  "subscribers": [
+    {
+      "email": "mvsuneelkumar2903@gmail.com",
+      "subscribedAt": "2026-04-04T10:56:35.383Z"
+    }
+  ],
+  "contactMessages": [
+    {
+      "id": "contact_1775300863523_twbov1",
+      "category": "General Query",
+      "name": "Suneel Kumar",
+      "email": "mvsuneelkumar2903@gmail.com",
+      "subject": "Test",
+      "message": "b",
+      "status": "read",
+      "createdAt": "2026-04-04T11:07:43.523Z"
+    },
+    {
+      "id": "contact_1775300367057_r62qiw",
+      "category": "General Query",
+      "name": "Suneel Kumar",
+      "email": "mvsuneelkumar2903@gmail.com",
+      "subject": "Test",
+      "message": "f",
+      "status": "read",
+      "createdAt": "2026-04-04T10:59:27.057Z"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "testimonial-1",
+      "authorName": "N. Chandrababu Naidu",
+      "authorTitle": "Hon'ble Chief Minister of Andhra Pradesh",
+      "content": "An ordinary party worker who dedicated 34 years to the BJP has risen to become a Central Minister. This is what makes BJP different - a party that recognizes hard work and commitment from its grassroots workers.",
+      "party": "TDP",
+      "isActive": true,
+      "date": "2024-06-12",
+      "createdAt": "2026-04-05T00:00:00.000Z"
+    },
+    {
+      "id": "testimonial-2",
+      "authorName": "JP Nadda",
+      "authorTitle": "National President, Bharatiya Janata Party",
+      "content": "Srinivasa Varma represents the true spirit of BJP - a karyakarta who has worked tirelessly at every level of the party. His dedication to Narasapuram and Andhra Pradesh makes him an invaluable member of our team.",
+      "party": "BJP",
+      "isActive": true,
+      "date": "2024-05-15",
+      "createdAt": "2026-04-05T00:00:00.000Z"
+    },
+    {
+      "id": "testimonial-3",
+      "authorName": "D. Purandeswari",
+      "authorTitle": "President, BJP Andhra Pradesh",
+      "content": "Varma garu's journey from a dedicated party worker to Union Minister is an inspiration for every BJP karyakarta in Andhra Pradesh. His unwavering commitment to the party's ideology and the people of Narasapuram is exemplary.",
+      "party": "BJP",
+      "isActive": true,
+      "date": "2024-06-10",
+      "createdAt": "2026-04-05T00:00:00.000Z"
+    },
+    {
+      "id": "testimonial-4",
+      "authorName": "Pawan Kalyan",
+      "authorTitle": "Deputy Chief Minister, Andhra Pradesh & Jana Sena President",
+      "content": "As NDA allies, we have seen the commitment of Srinivasa Varma garu towards the development of Andhra Pradesh. His elevation as Union Minister is well-deserved recognition of decades of service.",
+      "party": "Jana Sena",
+      "isActive": true,
+      "date": "2024-06-09",
+      "createdAt": "2026-04-05T00:00:00.000Z"
+    }
+  ],
+  "quotes": [
+    {
+      "id": "q-1",
+      "en": "\"Arise, awake, and stop not till the goal is reached.\" — Swami Vivekanand",
+      "te": "\"లేవండి, మేల్కొనండి, లక్ష్యం చేరుకునే వరకు ఆగకండి.\" — స్వామి వివేకానంద",
+      "isActive": true,
+      "updatedAt": "2026-04-05T13:38:34.637Z"
+    },
+    {
+      "id": "q-2",
+      "en": "\"Sabka Saath, Sabka Vikas, Sabka Vishwas.\" — Narendra Modi",
+      "te": "\"సబ్కా సాథ్, సబ్కా వికాస్, సబ్కా విశ్వాస్.\" — నరేంద్ర మోదీ",
+      "isActive": true
+    },
+    {
+      "id": "q-3",
+      "en": "\"Integral Humanism is the soul of the Bharatiya Janata Party.\" — Pandit Deendayal Upadhyaya",
+      "te": "\"ఏకాత్మ మానవదర్శనం భారతీయ జనతా పార్టీ ఆత్మ.\" — పండిత దీన్‌దయాళ్ ఉపాధ్యాయ",
+      "isActive": true
+    },
+    {
+      "id": "q-4",
+      "en": "\"Service to the nation is the highest form of devotion.\" — BJP Varma",
+      "te": "\"దేశ సేవే అత్యుత్తమ భక్తి.\" — బీజేపీ వర్మ",
+      "isActive": true
+    },
+    {
+      "id": "q-5",
+      "en": "\"A strong, united India is our goal and our duty.\" — Dr. Syama Prasad Mookerjee",
+      "te": "\"బలమైన, ఐక్య భారతదేశమే మన లక్ష్యం మరియు మన విధి.\" — డా. శ్యామ ప్రసాద్ ముఖర్జీ",
+      "isActive": true
+    }
+  ],
+  "yearlyReports": [
+    {
+      "id": "yr-1",
+      "year": "2024–25",
+      "title": "First Year in Parliament",
+      "available": true,
+      "pdfPath": "/profile?autoprint=1",
+      "highlights": [
+        "₹2,787 crore secured for Amaravati",
+        "Active participation in Parliamentary Standing Committee",
+        "₹48 crore sanctioned for Narsapuram Inner Ring Road-3",
+        "ROBs worth ₹159 crore approved for Guntur"
+      ],
+      "updatedAt": "2026-04-05T13:44:23.873Z"
+    },
+    {
+      "id": "yr-2",
+      "year": "2025–26",
+      "title": "Second Year in Parliament",
+      "available": false,
+      "highlights": [
+        "Report will be published at the end of the financial year."
+      ]
+    },
+    {
+      "id": "yr-3",
+      "year": "2026–27",
+      "title": "Third Year in Parliament",
+      "available": false,
+      "highlights": [
+        "Coming soon."
+      ]
+    }
+  ],
+  "siteSettings": {
+    "quotesTicker": true,
+    "voicesOfSupport": true,
+    "yearlyReports": true,
+    "foundation": true,
+    "updatedAt": "2026-04-05T14:11:17.487Z"
+  },
+  "foundation": []
+}
