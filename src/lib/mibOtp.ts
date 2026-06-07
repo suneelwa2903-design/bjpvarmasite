@@ -4,7 +4,7 @@ import { randomInt } from 'crypto'
 const OTP_EXPIRY_MINUTES = 15
 const OTP_RESEND_WINDOW_MS = 60 * 1000
 
-export type MibOtpPurpose = 'MIB_EMAIL_VERIFY' | 'MIB_PASSWORD_RESET'
+export type MibOtpPurpose = 'MIB_EMAIL_VERIFY' | 'MIB_PASSWORD_RESET' | 'ADMIN_PASSWORD_RESET'
 
 export function generateOtpCode(length = 6) {
   const digits = '0123456789'
