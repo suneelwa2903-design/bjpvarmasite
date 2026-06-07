@@ -269,19 +269,26 @@ export default function JourneyManager({ data }: { data: any }) {
                       </div>
                       <p className="text-sm text-green-600">✓ Image selected: {selectedImage?.name}</p>
                     </div>
-                  ) : editing?.image ? (
-                    <div className="relative h-48 rounded-lg border border-gray-200 overflow-hidden">
-                      <Image
-                        src={editing.image}
-                        alt="Current"
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                      <p className="text-sm text-gray-500 mt-2">Current image (upload new to replace)</p>
-                    </div>
                   ) : (
-                    <div className="relative">
+                    /* No new file selected — show current (if any) AND always show an upload control */
+                    <div className="space-y-3">
+                      {editing?.image && (
+                        <div>
+                          <div className="relative h-48 rounded-lg border border-gray-200 overflow-hidden">
+                            <Image
+                              src={editing.image}
+                              alt="Current journey image"
+                              fill
+                              className="object-cover"
+                              sizes="(max-width: 768px) 100vw, 50vw"
+                            />
+                          </div>
+                          <p className="text-xs text-gray-500 mt-1">
+                            Current image — upload a new file below to replace it.
+                          </p>
+                        </div>
+                      )}
+
                       <input
                         type="file"
                         id="journey-image-upload"
@@ -293,9 +300,11 @@ export default function JourneyManager({ data }: { data: any }) {
                         htmlFor="journey-image-upload"
                         className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer hover:border-orange-400 hover:bg-orange-50 transition-colors block"
                       >
-                        <Upload className="h-12 w-12 mx-auto text-gray-400 mb-4" />
-                        <p className="text-sm text-gray-600 mb-2">Click to upload or drag and drop</p>
-                        <p className="text-xs text-gray-500">Recommended: Square format (max 5MB)</p>
+                        <Upload className="h-10 w-10 mx-auto text-gray-400 mb-3" />
+                        <p className="text-sm text-gray-700 mb-1 font-medium">
+                          {editing?.image ? 'Click to upload a replacement image' : 'Click to upload or drag and drop'}
+                        </p>
+                        <p className="text-xs text-gray-500">JPG, PNG or WebP — max 5MB</p>
                       </label>
                     </div>
                   )}

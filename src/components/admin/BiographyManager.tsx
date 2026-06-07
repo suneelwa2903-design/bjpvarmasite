@@ -154,6 +154,7 @@ export default function BiographyManager({ data }: { data: any }) {
                     tip="Center the subject — corners may be slightly cropped. Head-and-shoulders portrait works best."
                   />
                   {imagePreview ? (
+                    /* User has selected a new file — show preview + remove */
                     <div className="space-y-4">
                       <div className="relative h-64 rounded-lg border border-gray-200 overflow-hidden">
                         <Image
@@ -170,26 +171,34 @@ export default function BiographyManager({ data }: { data: any }) {
                             setImagePreview(null)
                           }}
                           className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600"
+                          aria-label="Remove selected image"
                         >
                           <X className="h-4 w-4" />
                         </button>
                       </div>
-                      <p className="text-sm text-green-600">✓ Image selected: {selectedImage?.name}</p>
-                    </div>
-                  ) : biography?.image ? (
-                    <div className="relative h-64 rounded-lg border border-gray-200 overflow-hidden">
-                      <Image
-                        src={biography.image}
-                        alt="Current"
-                        fill
-                        sizes="100vw"
-                        className="object-cover"
-                        loading="lazy"
-                      />
-                      <p className="text-sm text-gray-500 mt-2">Current image (upload new to replace)</p>
+                      <p className="text-sm text-green-600">✓ New image selected: {selectedImage?.name}</p>
                     </div>
                   ) : (
-                    <div className="relative">
+                    /* No new file selected — show current (if any) AND always show an upload control */
+                    <div className="space-y-3">
+                      {biography?.image && (
+                        <div>
+                          <div className="relative h-64 rounded-lg border border-gray-200 overflow-hidden">
+                            <Image
+                              src={biography.image}
+                              alt="Current biography image"
+                              fill
+                              sizes="100vw"
+                              className="object-cover"
+                              loading="lazy"
+                            />
+                          </div>
+                          <p className="text-xs text-gray-500 mt-1">
+                            Current image — upload a new file below to replace it.
+                          </p>
+                        </div>
+                      )}
+
                       <input
                         type="file"
                         id="biography-image-upload"
@@ -201,9 +210,11 @@ export default function BiographyManager({ data }: { data: any }) {
                         htmlFor="biography-image-upload"
                         className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer hover:border-orange-400 hover:bg-orange-50 transition-colors block"
                       >
-                        <Upload className="h-12 w-12 mx-auto text-gray-400 mb-4" />
-                        <p className="text-sm text-gray-600 mb-2">Click to upload or drag and drop</p>
-                        <p className="text-xs text-gray-500">Recommended: Portrait format (max 5MB)</p>
+                        <Upload className="h-10 w-10 mx-auto text-gray-400 mb-3" />
+                        <p className="text-sm text-gray-700 mb-1 font-medium">
+                          {biography?.image ? 'Click to upload a replacement image' : 'Click to upload or drag and drop'}
+                        </p>
+                        <p className="text-xs text-gray-500">JPG, PNG or WebP — max 5MB</p>
                       </label>
                     </div>
                   )}
