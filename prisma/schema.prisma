@@ -1,12 +1,12 @@
-// SQLite schema for local development
-// This schema uses SQLite instead of PostgreSQL
+// PostgreSQL schema for AWS RDS deployment
+// This schema uses PostgreSQL instead of SQLite
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -108,8 +108,8 @@ model MibTicket {
   pincode           String?
 
   subject           String
-  descriptionHtml   String
-  descriptionPlain  String?
+  descriptionHtml   String   @db.Text
+  descriptionPlain  String?  @db.Text
 
   hasReference      Boolean  @default(false)
   refName           String?
@@ -160,7 +160,7 @@ model MibOtp {
 model MibSetting {
   id        String   @id @default(cuid())
   key       String   @unique
-  value     String   // JSON string
+  value     String   @db.Text // JSON string
   updatedAt DateTime @updatedAt
   createdAt DateTime @default(now())
 }
@@ -186,7 +186,7 @@ model MibTicketEvent {
   eventType    String   // CREATED | STATUS_CHANGED | NEED_INFO | REOPEN | ASSIGN | ASSIGNED | COMMENT
   fromValue    String?
   toValue      String?
-  note         String?
+  note         String?  @db.Text
   createdAt    DateTime @default(now())
 
   ticket       MibTicket @relation(fields: [ticketId], references: [id], onDelete: Cascade)
@@ -200,7 +200,7 @@ model MibTicketComment {
   ticketId     String
   authorUserId String?
   isInternal   Boolean  @default(false)
-  bodyHtml     String
+  bodyHtml     String   @db.Text
   createdAt    DateTime @default(now())
 
   ticket       MibTicket @relation(fields: [ticketId], references: [id], onDelete: Cascade)
