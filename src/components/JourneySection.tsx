@@ -67,10 +67,12 @@ const JourneySection = () => {
           {/* Prev/Next arrows — only show when multiple pages */}
           {totalPages > 1 && (
             <>
+              {/* P2.7: Anchor arrows inside container on mobile (left-2/right-2),
+                  keep them slightly outside on desktop (md:-left-6 / md:-right-6). */}
               <button
                 onClick={() => setCurrentPage((p) => Math.max(0, p - 1))}
                 disabled={currentPage === 0}
-                className="absolute -left-6 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-black rounded-full p-3 shadow-xl transition-all z-30 disabled:opacity-30 disabled:cursor-not-allowed"
+                className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-black rounded-full p-3 min-w-[44px] min-h-[44px] flex items-center justify-center shadow-xl transition-all z-30 disabled:opacity-30 disabled:cursor-not-allowed"
                 aria-label="Previous page"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
@@ -80,7 +82,7 @@ const JourneySection = () => {
               <button
                 onClick={() => setCurrentPage((p) => Math.min(totalPages - 1, p + 1))}
                 disabled={currentPage >= totalPages - 1}
-                className="absolute -right-6 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-black rounded-full p-3 shadow-xl transition-all z-30 disabled:opacity-30 disabled:cursor-not-allowed"
+                className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-black rounded-full p-3 min-w-[44px] min-h-[44px] flex items-center justify-center shadow-xl transition-all z-30 disabled:opacity-30 disabled:cursor-not-allowed"
                 aria-label="Next page"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>

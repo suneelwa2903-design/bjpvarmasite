@@ -283,7 +283,7 @@ export default function MakeItBetterPortal() {
                     <ExternalLink className="h-5 w-5 text-gray-400" />
                   </Link>
 
-                  <Link href="/initiatives" className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-orange-50 transition-colors group">
+                  <Link href="/impact" className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-orange-50 transition-colors group">
                     <Target className="h-6 w-6 text-orange-600" />
                     <div className="flex-1">
                       <div className="font-semibold text-gray-900 group-hover:text-orange-600">View BJPVarma Impact</div>

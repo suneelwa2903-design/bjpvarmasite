@@ -19,6 +19,13 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false, // Security: Remove X-Powered-By header
   reactStrictMode: true,
+  // 301 redirects — preserve old bookmarks (P2.6)
+  async redirects() {
+    return [
+      { source: '/initiatives', destination: '/impact', permanent: true },
+      { source: '/initiatives/:path*', destination: '/impact/:path*', permanent: true },
+    ]
+  },
   // Security: Additional headers (backup to middleware)
   async headers() {
     return [

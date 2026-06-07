@@ -196,6 +196,33 @@ header > * {
   z-index: 1;
 }
 
+/* Utility — hide scrollbar but keep scroll behavior (used on mobile chip rows) */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* P3.8 — Hide watermark entirely on small screens (declutters mobile)
+   The 81-image body watermark and the 9-image header watermark both
+   cost paint time and add visual noise on a phone-sized viewport. */
+@media (max-width: 480px) {
+  body::before,
+  header::before {
+    display: none !important;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  body::before {
+    opacity: 0.015; /* halved from 0.03 */
+  }
+  header::before {
+    opacity: 0.02; /* halved from 0.04 */
+  }
+}
+
 /* Global styles for search inputs and dropdowns - grey background */
 input[type="text"],
 input[type="search"],

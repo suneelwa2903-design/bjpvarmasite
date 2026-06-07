@@ -86,15 +86,19 @@ function InitiativesContent() {
         </div>
       </section>
 
-      {/* Filter */}
-      <section className="py-8 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+      {/* Filter — horizontally scrollable on mobile, centered on md+ (P2.5) */}
+      <section className="py-6 md:py-8 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex md:justify-center gap-2 md:gap-4 overflow-x-auto md:overflow-visible -mx-4 px-4 pb-1 md:pb-0 md:flex-wrap snap-x snap-mandatory no-scrollbar">
             {([['all', t('impact.filter.all')], ['constituency', t('impact.filter.constituency')], ['ministry', t('impact.filter.ministry')]] as const).map(([val, label]) => (
               <button
                 key={val}
                 onClick={() => setSelectedType(val)}
-                className={`px-6 py-2 rounded-full font-semibold transition-all ${selectedType === val ? 'bg-orange-600 text-white shadow-md' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                className={`shrink-0 snap-start px-5 md:px-6 py-2.5 md:py-2 min-h-[44px] rounded-full font-semibold text-sm md:text-base transition-all whitespace-nowrap ${
+                  selectedType === val
+                    ? 'bg-orange-600 text-white shadow-md'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
               >
                 {label}
               </button>

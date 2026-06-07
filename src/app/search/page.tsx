@@ -87,7 +87,7 @@ export default function SearchPage() {
                   <h2 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">Initiatives ({results.initiatives.length})</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {results.initiatives.map((i) => (
-                      <Link key={i.id} href={`/initiatives`} className="block bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all border border-gray-100 dark:border-gray-800 p-5">
+                      <Link key={i.id} href={`/impact`} className="block bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all border border-gray-100 dark:border-gray-800 p-5">
                         <div className="flex items-center justify-between mb-2">
                           <span className={`text-xs font-semibold px-3 py-1 rounded-full ${i.type === 'ministry' ? 'bg-blue-100 text-blue-700' : 'bg-green-100 text-green-700'}`}>{i.type}</span>
                           {i.date && (<span className="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400"><Calendar className="h-3 w-3" />{i.date}</span>)}

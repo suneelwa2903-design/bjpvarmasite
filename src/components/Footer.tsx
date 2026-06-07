@@ -20,7 +20,7 @@ const Footer = () => {
     { name: t('footer.quick.about'), href: '/biography' },
     { name: t('footer.quick.gallery'), href: '/gallery' },
     { name: t('footer.quick.press'), href: '/press-release' },
-    { name: t('footer.quick.impact'), href: '/initiatives' },
+    { name: t('footer.quick.impact'), href: '/impact' },
     { name: 'Download Profile', href: '/profile' },
     { name: 'Reports', href: '/#reports' },
     { name: t('footer.quick.contact'), href: '/contact' },
